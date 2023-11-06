@@ -1,0 +1,60 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style the creative nav bar */
+.navbar {
+    background-color: #e3f2fd;
+    padding: 10px 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: transparent;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover {
+    color: #90caf9;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    background-color: #90caf9;
+}
+
+    /* Add this style block within the <head> section of your HTML document */
+    .animated-link {
+      transition: color 0.3s ease; /* Smooth color transition */
+  }
+
+  .animated-link:hover {
+      color: #ff5722; /* Change to your desired hover color */
+  }
